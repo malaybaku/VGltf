@@ -5,12 +5,14 @@
 // file LICENSE_1_0.txt or copy at  https://www.boost.org/LICENSE_1_0.txt)
 //
 
+using System;
 using System.Collections.Generic;
 using VJson;
 using VJson.Schema;
 
 namespace VGltf.Ext.Vrm0.Types
 {
+    [Serializable]
     [JsonSchema(Title = "vrm.blendshape",
                 Id = "vrm.blendshape.schema.json"/* TODO: Fix usage of Id */)]
     public class BlendShape
@@ -20,6 +22,7 @@ namespace VGltf.Ext.Vrm0.Types
 
         //
 
+        [Serializable]
         [JsonSchema(Title = "vrm.blendshape.group",
                     Id = "vrm.blendshape.group.schema.json"/* TODO: Fix usage of Id */)]
         public class GroupType
@@ -96,6 +99,7 @@ namespace VGltf.Ext.Vrm0.Types
             }
         }
 
+        [Serializable]
         [JsonSchema(Title = "vrm.blendshape.bind",
                     Id = "vrm.blendshape.bind.schema.json"/* TODO: Fix usage of Id */)]
         public class BindType
@@ -118,6 +122,7 @@ namespace VGltf.Ext.Vrm0.Types
             public float Weight = 0.0f;
         }
 
+        [Serializable]
         [JsonSchema(Title = "vrm.blendshape.materialbind",
                     Id = "vrm.blendshape.materialbind.schema.json"/* TODO: Fix usage of Id */)]
         public class MaterialValueBindType
